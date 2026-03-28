@@ -1,0 +1,51 @@
+{
+  "name": "chess-snap",
+  "version": "1.0.0",
+  "description": "Generate high-quality Chess Boards (like chess.com & lichess) through FEN, PGN & Arrays using Napi-RS.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-test-coverage --test --loader ts-node/esm tests/index.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "src/assets"
+  ],
+  "keywords": [
+    "chess",
+    "board",
+    "generator",
+    "image",
+    "canvas",
+    "napi",
+    "fen",
+    "pgn",
+    "lichess",
+    "chess.com",
+    "snapshot"
+  ],
+  "author": "Carlyle Katto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kogakisaki/chess-snap.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.97",
+    "chess.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
